@@ -27,8 +27,6 @@ export default function Autocomplete({ suggestions }) {
     setShowSuggestions(false);
   };
 
-  const onKeyDown = (e) => {};
-
   const SuggestionsListComponent = () => {
     return filteredSuggestions.length ? (
       <ul className="suggestions">
@@ -57,7 +55,6 @@ export default function Autocomplete({ suggestions }) {
         type="text"
         onChange={onChange}
         value={input}
-        onKeyDown={onKeyDown}
         onClick={() => setShowSuggestions(!showSuggestions)}
       />
       {showSuggestions && input && <SuggestionsListComponent />}
