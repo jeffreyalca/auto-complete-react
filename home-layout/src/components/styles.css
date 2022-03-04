@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    font-family:'Noto Sans',sans-serif;
+}
+
+/* HEADER COMPONENT */
+
+.header {
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   width:100%;
+}
+
+.header__stack {
+    display:flex;
+    align-items: center;
+}
+
+.header__stack--blue {
+    background-color: #0088ce;
+    height: 46px; 
+}
+.header__stack--gray {
+    background-color: #d8d8d8;
+}
+
+.header__Login {
+    display: flex;
+    justify-content: center;   
+    padding-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.header__Login-wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 5px 10px 5px;
+    width: 30%;
+}
+.header__Login-label {
+    font-family:'Noto Sans',sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.header__Login-input {
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    width:100%;
+    background-color: #eaeaea;
+}
+
+.header__Login-input:focus {
+      outline:none;
+}
+
+.header__Login-link {
+    color: #0052ad;
+    text-decoration: none;
+    line-height: 12px;
+    font-size: 10px;
+    font-family:'Noto Sans',sans-serif;
+    margin-top: 2px;
+}
+
+.header__cta {
+    padding: 4px 12px;
+    border: 2px solid #0086d6;
+    background-color: #0086d6;
+    border-radius: 6px;
+    color: #fff;
+    height: 30px;
+    margin-top: 26px;
+    margin-left: 10px;
+    width:30%;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+
+.header__logo {
+    width: 150px;
+    margin-top: 30px;
+    height: 130px;
+    z-index: 1;
+  }
+
+.header__logo-wrapper {
+    display:flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 65%;
+    padding: 0 30px;
+    
+}
+
+/* MAIN COMPONENT */
+
+.main {
+    background-color: #ededed;
+    margin-top: 161px;
+}
+
+.main__header {
+    text-align: center;
+    line-height: 13px;
+    letter-spacing: 4px;
+    margin-top: 80px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.main__line {
+    border: none;
+    border-bottom: 1px dashed #b2b2b2;
+    right: 40%; 
+    width: 100%;
+    position: relative;
+}
+
+.main__container {
+    display:flex;
+    width: 70%;
+    margin: 4% auto 6%;
+    justify-content: center;;
+}
+
+.main__content-wrapper {
+    width:41%;
+    margin-left:40px;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.main__image-wrapper {
+    width: 45%;
+}
+
+.main__image {
+    width: 100%;
+    height: auto;
+}
+
+.main__title {
+    font-size: 1rem;
+    line-height: 22px;
+    letter-spacing: 1.6px;
+    font-weight: 400;
+    color: #0082ca;
+    text-align: left;
+}
+
+.main__content {
+    text-align: left;
+    letter-spacing: 1.3px;
+    font-size: 0.8125rem;
+    line-height: 20px;
+}
+.main__cta {
+    padding: 4px 12px;
+    border: 2px solid #0086d6;
+    background-color: #0086d6;
+    border-radius: 6px;
+    color: #fff;
+    height: 30px;
+    width: 200px;
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+/* FOOTER COMPONENT */
+
+.footer__wrapper--blue {
+    background-color: #0088ce;
+}
+
+.footer__wrapper--gray {
+   background-color: #d8d8d8;  
+}
+
+.footer__socials {
+   margin: 2% auto 1%;
+   width:75%;
+   text-align:center;
+}
+
+.footer__socials-icon {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 10px;
+    border-radius: 50%;
+    background-color: white;
+    color: #0088ce;;
+}
+
+.footer__link {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer__link-text {
+    font-size: .700rem;
+    line-height: 1em;
+    letter-spacing: 1px;
+    color:white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0px 15px;
+}
+
+.footer__ribbon {
+    display:flex;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.footer__ribbon-copyright {
+    font-size: .650rem;
+    line-height: 18px;
+    letter-spacing: 0;
+}
+
+.footer__ribbon-link {
+    font-size: .625rem;
+    line-height: 18px;
+    letter-spacing: 1.3px;;
+    margin-left: 25px; 
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer__ribbon-link-wrapper {
+    padding-top: 5px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .main__container  {
+        width: 95%;
+        margin: 4% auto 5%;      
+    }
+    .main__content-wrapper {
+        width:43%;
+    }
+    .main__image-wrapper {
+        width:40%;
+    }
+
+    .header__logo-wrapper {
+        width: 80%;
+    }
+}
