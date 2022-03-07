@@ -9,27 +9,12 @@ import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 export default function SocialMediaLinks() {
   return (
     <>
-      <div className="footer-socials__layout">
-        <FontAwesomeIcon
-          icon={faFacebookF}
-          className="footer-socials-item__layout"
-        />
-        <FontAwesomeIcon
-          icon={faTwitter}
-          className="footer-socials-item__layout"
-        />
-        <FontAwesomeIcon
-          icon={faYoutube}
-          className="footer-socials-item__layout"
-        />
-        <FontAwesomeIcon
-          icon={faInstagram}
-          className="footer-socials-item__layout"
-        />
-        <FontAwesomeIcon
-          icon={faLinkedinIn}
-          className="footer-socials-item__layout"
-        />
+      <div className="socials--wrapper">
+        <FontAwesomeIcon icon={faFacebookF} className="socials__item" />
+        <FontAwesomeIcon icon={faTwitter} className="socials__item" />
+        <FontAwesomeIcon icon={faYoutube} className="socials__item" />
+        <FontAwesomeIcon icon={faInstagram} className="socials__item" />
+        <FontAwesomeIcon icon={faLinkedinIn} className="socials__item" />
       </div>
     </>
   );

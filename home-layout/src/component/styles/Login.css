@@ -1,0 +1,39 @@
+/* log in */
+
+.login--wrapper {
+  background: #dbdada;
+  height: 87px;
+}
+
+.login__input--wrapper {
+  padding-top: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+  margin: 0 375px;
+  padding: 4 30px;
+}
+
+.login__email--padding {
+  padding-left: 94px;
+}
+
+.login__button--wrapper {
+  padding-top: 2px;
+}
+
+.login__button {
+  background: #0082ca;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 260px;
+  height: 30px;
+}

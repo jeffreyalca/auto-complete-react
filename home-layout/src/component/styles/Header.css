@@ -1,0 +1,21 @@
+.header--wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__upper {
+  background: #dbdada;
+  height: 25px;
+}
+
+.header__middle {
+  background: #0086d6;
+  height: 46px;
+}
+
+.header__image {
+  position: absolute;
+  top: -8px;
+  left: 444px;
+  height: 127px;
+}

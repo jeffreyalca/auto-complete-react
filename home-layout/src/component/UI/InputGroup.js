@@ -1,15 +1,13 @@
 import React from "react";
 
+import "../styles/InputGroup.css";
+
 export default function InputGroup(props) {
   return (
-    <div className={`header-login__flex-column ${props.className}`}>
-      <label className="header-login-label__font-style">
-        {props.labelName}*
-      </label>
-      <input type={props.type} className="header-login-input-text__size" />
-      <small className="header-login-small__color-blue">
-        {props.smallText}
-      </small>
+    <div className={`input__wrapper ${props.className}`}>
+      <label className="input__label">{props.labelName}*</label>
+      <input type={props.type} className="input__textfield" />
+      <small className="input__small">{props.smallText}</small>
     </div>
   );
 }

@@ -1,25 +1,24 @@
 import React from "react";
 import InputGroup from "../UI/InputGroup";
+import "../styles/Login.css";
 
 export default function Login() {
   return (
-    <div className="header-bottom-section__bg-gray__h-87">
-      <div className="header-login__flex-row header-login__margin__padding">
+    <div className="login--wrapper">
+      <div className="login__input--wrapper">
         <InputGroup
           labelName={"EMAIL ADDRESS"}
           type={"text"}
           smallText={"or Request Access"}
-          className={"header-login__padding-left"}
+          className={"login__email--padding"}
         />
         <InputGroup
           labelName={"PASSWORD"}
           type={"password"}
           smallText={"Forgot Username or Password?"}
         />
-        <div className="header-login-button__padding">
-          <button className="button__color-blue header-login-button__size">
-            LOGIN
-          </button>
+        <div className="login__button--wrapper">
+          <button className="login__button">LOGIN</button>
         </div>
       </div>
     </div>
