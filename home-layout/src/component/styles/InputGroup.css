@@ -1,0 +1,31 @@
+/* input group */
+
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.input__label {
+  letter-spacing: 2.74px;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.72rem;
+}
+
+.input__textfield {
+  height: 30px;
+  width: 261px;
+  border: none;
+  border-radius: 4px;
+  background: #eaeaea;
+}
+
+.input__small {
+  color: #0052ad;
+  font-family: "Noto Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-top: -3px;
+}
