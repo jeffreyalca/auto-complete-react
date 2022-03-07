@@ -1,5 +1,4 @@
 import React from 'react';
-import './styles.css';
 import { GrFacebookOption, GrTwitter,GrYoutube} from 'react-icons/gr';
 import {FaLinkedinIn, FaInstagram} from 'react-icons/fa';
 

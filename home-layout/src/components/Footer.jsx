@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './styles/footer.css';
 import SocialMedia from './SocialMedia';
 import FooterLink from './FooterLink';
 import FooterRibbon from './FooterRibbon';
