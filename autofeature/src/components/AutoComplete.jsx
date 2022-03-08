@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import "./styles.css";
 import countries from "../Countries";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdClear } from 'react-icons/md';
 import SearchList from './SearchList';
+import debounce from 'lodash.debounce';
 
 
-function AutoComplete(props) {
-
-
+function AutoComplete() {
     const [isVisible, setVisibility] = useState(false);
     const [input, setInput] = useState("");
     const [suggestion, setSuggestion] = useState([]);
@@ -16,20 +15,22 @@ function AutoComplete(props) {
     const hideSuggestion = () => setVisibility(false);
 
 
+    const debounceSearch = useCallback(
+        debounce(query => {
+            if (!query) return setSuggestion([])
+
+            const regex = new RegExp(`^${query}`, "i");
+            setSuggestion(countries.filter(term => regex.test(term)))
+            console.log('test');
+        }, 500), []
+    )
+
     const handleChange = (e) => {
         const value = e.target.value;
         setInput(e.target.value);
-        if (value.length > 0) {
-            showSuggestion();
-            const regex = new RegExp(`^${e.target.value}`, "i");
-            setSuggestion(countries.sort().filter(term => regex.test(term)));
-        }
-        else {
-            hideSuggestion();
-            setSuggestion([]);
-        }
-    
+        debounceSearch(value);
     }
+
     const handleClear = () => {
         setInput("");
         setSuggestion([]);
@@ -37,36 +38,32 @@ function AutoComplete(props) {
     }
 
     return (
-
-        <form className="auto-complete-wrapper">
+        <div className="auto-complete-wrapper">
             <div className="input-wrapper">
                 <span><AiOutlineSearch /></span>
                 <input
                     className="search-bar"
                     placeholder="Search"
-                    onClick={() => showSuggestion()}
+                    onClick={showSuggestion}
                     onChange={(e) => handleChange(e)}
                     value={input}>
                 </input>
-                <span onClick={()=> handleClear()}><MdClear /></span>
+                <span onClick={handleClear}><MdClear /></span>
             </div>
-            {isVisible &&
-                <ul>
-                    {suggestion.length ? (
-                        suggestion.map((x, i) => (
-                            <SearchList
-                                key={i}
-                                index={i}
-                                hideSuggestion={hideSuggestion}
-                                setInput={setInput}
-                                search={x}
-                            />
-                        )))
-                        : (<li></li>)
-                    }
 
+            {isVisible && input &&
+                <ul>
+                    {suggestion.map((x, i) => (
+                        <SearchList
+                            key={i}
+                            index={i}
+                            hideSuggestion={hideSuggestion}
+                            setInput={setInput}
+                            search={x}
+                        />
+                    ))}
                 </ul>}
-        </form>
+        </div>
     )
 }
 export default AutoComplete;
