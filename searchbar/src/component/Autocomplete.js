@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
+import debounce from "lodash.debounce";
 
 export default function Autocomplete({ suggestions }) {
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
@@ -6,9 +7,20 @@ export default function Autocomplete({ suggestions }) {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [input, setInput] = useState("");
 
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowSuggestions(true);
+  //   }, 1000);
+  //   return () => {
+  //     clearTimeout(timer);
+  //     setShowSuggestions(false);
+  //   };
+  // }, [input]);
+
   const onChange = (e) => {
     const userInput = e.target.value;
 
+    // filters the list that contain the user's input
     const unLinked = suggestions.filter(
       (suggestion) =>
         suggestion.toLowerCase().indexOf(userInput.toLowerCase()) > -1
@@ -19,6 +31,8 @@ export default function Autocomplete({ suggestions }) {
     setActiveSuggestionIndex(0);
     setShowSuggestions(true);
   };
+
+  const debouncedChangedHandler = useCallback(debounce(onChange, 1000), []);
 
   const onClick = (e) => {
     setFilteredSuggestions([]);
@@ -50,14 +64,9 @@ export default function Autocomplete({ suggestions }) {
   };
 
   return (
-    <React.Fragment>
-      <input
-        type="text"
-        onChange={onChange}
-        value={input}
-        onClick={() => setShowSuggestions(!showSuggestions)}
-      />
+    <>
+      <input type="text" onChange={debouncedChangedHandler} />
       {showSuggestions && input && <SuggestionsListComponent />}
-    </React.Fragment>
+    </>
   );
 }

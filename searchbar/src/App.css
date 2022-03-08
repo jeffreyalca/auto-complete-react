@@ -2,15 +2,18 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+
 input {
   border: 1px solid #999;
   padding: 0.5rem;
   width: 300px;
 }
+
 .no-suggestions {
   color: #999;
   padding: 0.5rem;
 }
+
 .suggestions {
   border: 1px solid rgb(102, 21, 21);
   border-top-width: 0;
@@ -23,9 +26,11 @@ input {
 
   margin: auto;
 }
+
 .suggestions li {
   padding: 0.5rem;
 }
+
 .suggestion-active,
 .suggestions li:hover {
   background-color: rgb(199, 195, 195);
@@ -33,6 +38,7 @@ input {
   cursor: pointer;
   font-weight: 700;
 }
+
 .suggestions li:not(:last-of-type) {
   border-bottom: 1px solid #999;
 }
