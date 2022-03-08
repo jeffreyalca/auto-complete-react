@@ -1,0 +1,42 @@
+.search-bar {
+    width: 95%;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .auto-complete-wrapper {
+    width: 50%;
+    border: 1px solid grey;
+    box-shadow: 0 2px 10px #888;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: auto;
+  }
+  
+  .auto-complete-wrapper ul {
+
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 1px solid gray;
+    overflow-y: auto;
+  }
+  
+  .suggestion {
+    padding: 10px 15px 10px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .suggestion:hover {
+    background-color: lightgray;
+  }
+  
+  
