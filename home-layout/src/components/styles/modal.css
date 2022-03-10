@@ -1,0 +1,111 @@
+.LoginModal-wrapper {
+    position: fixed;
+    z-index: 8;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.LoginModal {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    padding: 20px;
+}
+
+.LoginModal__header {
+    padding: 5px 10px;
+    position: relative;
+}
+
+.LoginModal__title {
+    margin: 0;
+    width: 100%;
+}
+
+.LoginModal__text {
+    margin: 0;
+    margin-bottom: 15px;
+    ;
+    float: right;
+    font-size: 0.75rem;
+    letter-spacing: 1.3px;
+}
+
+.LoginModal__cta-close {
+    display: block;
+    background: #0000;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    top: -0.75rem;
+    right: 0.25rem;
+    font-size: 20px;
+    color: #0082ca;
+
+}
+
+.LoginModal__body {
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
+    ;
+}
+
+.LoginModal__line {
+    border: none;
+    border-bottom: 1px dashed #b2b2b2;
+}
+
+.LoginModal__label {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.LoginModal__input {
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    background-color: #eaeaea;
+    margin-bottom: 20px;
+    ;
+}
+
+.LoginModal__input:focus {
+    outline: none;
+}
+
+.LoginModal__cta {
+
+    border: 2px solid #0086d6;
+    background-color: #0086d6;
+    border-radius: 6px;
+    color: #fff;
+    height: 30px;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+}
+
+.LoginModal__link {
+    display: inline-block;
+    width: 100%;
+    color: #0052ad;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 12px;
+    margin: 10px auto;
+    font-family: 'Noto Sans', sans-serif;
+}
